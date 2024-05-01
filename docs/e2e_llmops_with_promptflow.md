@@ -118,9 +118,9 @@ Before you can set up an Prompt flow project with Machine Learning, you need to 
 
 Connection helps securely store and manage secret keys or other sensitive credentials required for interacting with LLM and other external tools for example Azure Content Safety.
 
-In this guide, we will use flow `web-classification` which uses connection `Default_AzureOpenAI` inside, we need to set up the connection if we haven’t added it before.
+In this guide, we will use flow `web-classification` which uses connection `AzureOpenAI` inside, we need to set up the connection if we haven’t added it before.
 
-Please go to workspace portal, click `Prompt flow` -> `Connections` -> `Create` -> `Azure OpenAI`, then follow the instruction to create your own connections called `Default_AzureOpenAI`. Learn more on [connections](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/concept-connections?view=azureml-api-2).
+Please go to workspace portal, click `Prompt flow` -> `Connections` -> `Create` -> `Azure OpenAI`, then follow the instruction to create your own connections called `AzureOpenAI`. Learn more on [connections](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/concept-connections?view=azureml-api-2).
 
 ![Screenshot of Prompt flow Connections](media/e2e-llmops/promptflow_connections.png)
 
@@ -150,7 +150,7 @@ You'll use the `run.yml` and `run_evaluation` files to deploy the Prompt flow st
 
 1. In your cloned repository, open `web-classification/run.yml` and `web-classification/run_evaluation.yml` 
 1. Each time you see `runtime: <runtime-name>`, update the value of `<runtime-name>` with your runtime name.
-1. Each time you see `connection: Default_AzureOpenAI`, update the value of `Default_AzureOpenAI`  to match the connection name in your Azure Machine Learning workspace.
+1. Each time you see `connection: AzureOpenAI`, update the value of `AzureOpenAI`  to match the connection name in your Azure Machine Learning workspace.
 1. Each time you see `deployment_name: gpt-35-turbo-0301`, update the value of `gpt-35-turbo-0301` with the name of your GPT 3.5 Turbo deployment associate with that connection.
 
 ## Sample Prompt Run, Evaluation and Deployment Scenario
