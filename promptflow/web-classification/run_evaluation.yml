@@ -7,7 +7,7 @@ column_mapping:
   prediction: ${run.outputs.category}
 
 # define cloud resource
-runtime: automatic
+runtime: 'PromptFlow_Runtime'
 
 connections:
   classify_with_llm:
