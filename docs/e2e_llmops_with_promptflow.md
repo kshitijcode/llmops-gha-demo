@@ -44,7 +44,7 @@ Before you can set up an Prompt flow project with Machine Learning, you need to 
 
     ![Screenshot of the cloud shell environment dropdown.](media/e2e-llmops/PS_CLI1_1.png)
 
-1. Copy the following bash commands to your computer and update the **projectName**, **subscriptionId**, and **environment** variables with the values for your project. This command will also grant the **Contributor** role to the service principal in the subscription provided. This is required for GitHub Actions to properly use resources in that subscription. 
+1. Copy the following bash commands to your computer and provide the value for the **projectName**, **subscriptionId**, and **environment** variables with the values for your project. This command will also grant the **Contributor** role to the service principal in the subscription provided. This is required for GitHub Actions to properly use resources in that subscription. 
 
     ``` bash
     projectName="<your project name>"
@@ -100,7 +100,7 @@ Before you can set up an Prompt flow project with Machine Learning, you need to 
 
     ![Screenshot of GitHub Secrets String 1.](media/e2e-llmops/github-secrets-string.png)
 
-1. Add each of the following additional GitHub secrets using the corresponding values from the service principal output as the content of the secret:  
+1. Add each of the following as a new GitHub secret(https://github.com/kshitijcode/llmops-gha-demo/settings/secrets/actions) and provide your resource group, azureML and subscription ID values:  
     - **GROUP**: \<Resource Group Name\>
     - **WORKSPACE**: \<Azure ML Workspace Name\>
     - **SUBSCRIPTION**: \<Subscription ID\>
@@ -129,7 +129,7 @@ Prompt flow's runtime provides the computing resources required for the applicat
 
 In this guide, we will use a runtime to run your prompt flow. You need to create your own [Prompt flow runtime](https://learn.microsoft.com/azure/machine-learning/prompt-flow/how-to-create-manage-runtime)
 
-Please go to workspace portal, click `Prompt flow` -> `Runtime` -> `Add`, then follow the instruction to create your own connections
+Please go to workspace portal, click `Prompt flow` -> `Runtime` -> `Create`, then follow the instruction to create your own connections
 
 ## Setup variables with for Prompt flow and GitHub Actions 
 

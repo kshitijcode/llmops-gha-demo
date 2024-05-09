@@ -3,7 +3,7 @@ name: Deploy Prompts with Promptflow
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["run-eval-pf-pipeline"]
+    workflows: ["Test and Evaulate Prompts with Promptflow"]
     branches: [main]
     types:
       - completed
