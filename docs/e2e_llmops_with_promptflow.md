@@ -147,9 +147,9 @@ In this guide, we will use an automatic runtime so we dont need to do anything a
 You'll use the `run.yml` and `run_evaluation` files to deploy the Prompt flow standard run and evaluation run. This is a flow run definition. You only need to update your [prompt flow runtime](https://learn.microsoft.com/azure/machine-learning/prompt-flow/how-to-create-manage-runtime). You will also need to update all the `connections` to match the connections in your Azure Machine Learning workspace and `deployment_name` to match the name of your GPT 3.5 Turbo deployment associate with that connection.
 
 1. In your cloned repository, open `web-classification/run.yml` and `web-classification/run_evaluation.yml` 
-1. Each time you see `runtime: <runtime-name>`, update the value of `<runtime-name>` with your runtime name.
 1. Each time you see `connection: AzureOpenAI`, update the value of `AzureOpenAI`  to match the connection name in your Azure Machine Learning workspace.
 1. Each time you see `deployment_name: gpt-35-turbo-0301`, update the value of `gpt-35-turbo-0301` with the name of your GPT 3.5 Turbo deployment associate with that connection.
+1. Kindly commit your changes to Github. 
 
 ## Sample Prompt Run, Evaluation and Deployment Scenario
 
