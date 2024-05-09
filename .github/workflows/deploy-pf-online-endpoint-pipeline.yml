@@ -17,11 +17,10 @@ env:
   ENDPOINT_NAME: web-classification
   DEPLOYMENT_NAME: blue
 
-  
+
 jobs:
   create-endpoint-and-deploy-pf:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }} 
     steps:
     - name: Check out repo
       uses: actions/checkout@v2

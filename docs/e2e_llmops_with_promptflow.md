@@ -184,7 +184,7 @@ This pipeline will start the prompt flow run and evaluate the results. When the 
  
      ![Screenshot of GitHub actions page.](media/e2e-llmops/github-actions.png)
       
-1. Select the `run-eval-pf-pipeline.yml` from the workflows listed on the left and the click **Run Workflow** to execute the Prompt flow run and evaluate workflow. This will take several minutes to run. 
+1. Select the `Test and Evaulate Prompts with Promptflow` from the workflows listed on the left and the click **Run Workflow** to execute the Prompt flow run and evaluate workflow. This will take several minutes to run. 
 
      ![Screenshot of Pipeline Run in GitHub.](media/e2e-llmops/github-training-pipeline.png)
 
