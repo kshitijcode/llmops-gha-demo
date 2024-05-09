@@ -3,7 +3,7 @@ name: Deploy Prompts with Promptflow
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Test and Evaulate Prompts with Promptflow"]
+    workflows: ["Test and Evaluate Prompts with Promptflow"]
     branches: [main]
     types:
       - completed
@@ -17,10 +17,11 @@ env:
   ENDPOINT_NAME: web-classification
   DEPLOYMENT_NAME: blue
 
-
+  
 jobs:
   create-endpoint-and-deploy-pf:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }} 
     steps:
     - name: Check out repo
       uses: actions/checkout@v2
