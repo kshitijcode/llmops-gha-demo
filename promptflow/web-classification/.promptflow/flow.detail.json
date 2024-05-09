@@ -1,7 +1,7 @@
 {
   "flow_runs": [
     {
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
       "status": "Completed",
       "error": null,
       "inputs": {
@@ -13,427 +13,346 @@
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "root_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "root_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
       "source_run_id": null,
       "flow_id": "default_flow_id",
-      "start_time": "2023-08-16T01:28:15.424182Z",
-      "end_time": "2023-08-16T01:28:33.094230Z",
+      "start_time": "2024-05-09T06:40:59.199599Z",
+      "end_time": "2024-05-09T06:41:06.954249Z",
       "index": 0,
       "api_calls": [
         {
-          "name": "fetch_text_content_from_url",
-          "type": "Tool",
-          "inputs": {
-            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
-          },
-          "output": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve",
-          "start_time": 1692174495.428718,
-          "end_time": 1692174501.405176,
-          "error": null,
-          "children": null,
-          "node_name": "fetch_text_content_from_url"
-        },
-        {
-          "name": "AzureOpenAI.chat",
-          "type": "Tool",
-          "inputs": {
-            "prompt": "system:\nPlease summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text.\n\nuser:\nText: {{text}}\nSummary: ",
-            "deployment_name": "gpt-35-turbo-0301",
-            "max_tokens": 128,
-            "temperature": 0.2,
-            "text": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve"
-          },
-          "output": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-          "start_time": 1692174501.596812,
-          "end_time": 1692174510.370567,
-          "error": null,
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1715217059.199599,
+          "end_time": 1715217066.954249,
           "children": [
             {
-              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
-              "type": "LLM",
+              "name": "prepare_examples",
+              "type": "Function",
+              "inputs": {},
+              "output": [
+                {
+                  "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
+                  "text_content": "Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.",
+                  "category": "App",
+                  "evidence": "Both"
+                },
+                {
+                  "url": "https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                  "text_content": "NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.",
+                  "category": "Channel",
+                  "evidence": "URL"
+                },
+                {
+                  "url": "https://arxiv.org/abs/2303.04671",
+                  "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+                  "category": "Academic",
+                  "evidence": "Text content"
+                },
+                {
+                  "url": "https://ab.politiaromana.ro/",
+                  "text_content": "There is no content available for this text.",
+                  "category": "None",
+                  "evidence": "None"
+                }
+              ],
+              "start_time": 1715217059.215782,
+              "end_time": 1715217059.225631,
+              "error": null,
+              "children": [],
+              "node_name": "prepare_examples",
+              "parent_id": "",
+              "id": "62a72136-a671-43c3-888e-5593cc8cc3c2",
+              "function": "prepare_examples",
+              "system_metrics": {}
+            },
+            {
+              "name": "fetch_text_content_from_url",
+              "type": "Function",
               "inputs": {
-                "api_base": "https://eastus.api.cognitive.microsoft.com/",
-                "api_type": "azure",
-                "api_version": "2023-03-15-preview",
-                "engine": "gpt-35-turbo-0301",
-                "messages": [
+                "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
+              },
+              "output": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r",
+              "start_time": 1715217059.221164,
+              "end_time": 1715217062.541699,
+              "error": null,
+              "children": [],
+              "node_name": "fetch_text_content_from_url",
+              "parent_id": "",
+              "id": "65b46774-d9c7-403d-897f-98fb8358b71a",
+              "function": "fetch_text_content_from_url",
+              "system_metrics": {}
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nPlease summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text.\n\nuser:\nText: {{text}}\nSummary: ",
+                "deployment_name": "gpt-35-turbo-0301",
+                "max_tokens": 128,
+                "temperature": 0.2,
+                "text": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r"
+              },
+              "output": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+              "start_time": 1715217062.54929,
+              "end_time": 1715217065.453943,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-35-turbo-0301",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "Please summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text."
+                      },
+                      {
+                        "role": "user",
+                        "content": "Text: X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r\nSummary:"
+                      }
+                    ],
+                    "temperature": 0.2,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": "",
+                    "max_tokens": 128
+                  },
+                  "output": {
+                    "id": "chatcmpl-9MrkddHgfRLlyVMRfZNvYNEloB9a6",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        }
+                      }
+                    ],
+                    "created": 1715236863,
+                    "model": "gpt-35-turbo",
+                    "object": "chat.completion",
+                    "system_fingerprint": "fp_2f57f81c11",
+                    "usage": {
+                      "completion_tokens": 119,
+                      "prompt_tokens": 445,
+                      "total_tokens": 564
+                    }
+                  },
+                  "start_time": 1715217062.566664,
+                  "end_time": 1715217065.453019,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "1e2eb481-f780-401e-a681-7014bec6882d",
+                  "id": "3b3bfe46-29b8-4287-915f-138ea1ff1ef1",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 119,
+                    "prompt_tokens": 445,
+                    "total_tokens": 564
+                  }
+                }
+              ],
+              "node_name": "summarize_text_content",
+              "parent_id": "",
+              "id": "1e2eb481-f780-401e-a681-7014bec6882d",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 119,
+                "prompt_tokens": 445,
+                "total_tokens": 564
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYour task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both.\n\nuser:\nThe selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\n{% for ex in examples %}\nURL: {{ex.url}}\nText content: {{ex.text_content}}\nOUTPUT:\n{\"category\": \"{{ex.category}}\", \"evidence\": \"{{ex.evidence}}\"}\n\n{% endfor %}\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: {{url}}\nText content: {{text_content}}.\nOUTPUT:",
+                "deployment_name": "gpt-35-turbo-0301",
+                "max_tokens": 128,
+                "temperature": 0.2,
+                "url": "https://play.google.com/store/apps/details?id=com.twitter.android",
+                "text_content": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+                "examples": [
                   {
-                    "role": "system",
-                    "content": "Please summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text."
+                    "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
+                    "text_content": "Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.",
+                    "category": "App",
+                    "evidence": "Both"
                   },
                   {
-                    "role": "user",
-                    "content": "Text: X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve\nSummary: "
+                    "url": "https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                    "text_content": "NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.",
+                    "category": "Channel",
+                    "evidence": "URL"
+                  },
+                  {
+                    "url": "https://arxiv.org/abs/2303.04671",
+                    "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+                    "category": "Academic",
+                    "evidence": "Text content"
+                  },
+                  {
+                    "url": "https://ab.politiaromana.ro/",
+                    "text_content": "There is no content available for this text.",
+                    "category": "None",
+                    "evidence": "None"
                   }
                 ],
-                "temperature": 0.2,
-                "top_p": 1.0,
-                "n": 1,
-                "stream": false,
-                "stop": null,
-                "max_tokens": 128,
-                "presence_penalty": 0.0,
-                "frequency_penalty": 0.0,
-                "logit_bias": {},
-                "user": ""
+                "_inputs_to_escape": [
+                  "url"
+                ]
+              },
+              "output": "{\"category\": \"App\", \"evidence\": \"Both\"}",
+              "start_time": 1715217065.463495,
+              "end_time": 1715217066.938864,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-35-turbo-0301",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "Your task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both."
+                      },
+                      {
+                        "role": "user",
+                        "content": "The selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\nURL: https://play.google.com/store/apps/details?id=com.spotify.music\nText content: Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.\nOUTPUT:\n{\"category\": \"App\", \"evidence\": \"Both\"}\n\nURL: https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw\nText content: NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.\nOUTPUT:\n{\"category\": \"Channel\", \"evidence\": \"URL\"}\n\nURL: https://arxiv.org/abs/2303.04671\nText content: Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.\nOUTPUT:\n{\"category\": \"Academic\", \"evidence\": \"Text content\"}\n\nURL: https://ab.politiaromana.ro/\nText content: There is no content available for this text.\nOUTPUT:\n{\"category\": \"None\", \"evidence\": \"None\"}\n\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: https://play.google.com/store/apps/details?id=com.twitter.android\nText content: The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion..\nOUTPUT:"
+                      }
+                    ],
+                    "temperature": 0.2,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": "",
+                    "max_tokens": 128
+                  },
+                  "output": {
+                    "id": "chatcmpl-9Mrkg59WA4jgZoXp06CbiHGmHrBdo",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"category\": \"App\", \"evidence\": \"Both\"}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        }
+                      }
+                    ],
+                    "created": 1715236866,
+                    "model": "gpt-35-turbo",
+                    "object": "chat.completion",
+                    "system_fingerprint": "fp_2f57f81c11",
+                    "usage": {
+                      "completion_tokens": 13,
+                      "prompt_tokens": 686,
+                      "total_tokens": 699
+                    }
+                  },
+                  "start_time": 1715217065.492499,
+                  "end_time": 1715217066.938043,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "30e0c1a3-3c93-4d05-b834-1e77872eac2d",
+                  "id": "6c55f1c2-4e32-4aa2-9edf-1eb5fd050143",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 13,
+                    "prompt_tokens": 686,
+                    "total_tokens": 699
+                  }
+                }
+              ],
+              "node_name": "classify_with_llm",
+              "parent_id": "",
+              "id": "30e0c1a3-3c93-4d05-b834-1e77872eac2d",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 13,
+                "prompt_tokens": 686,
+                "total_tokens": 699
+              }
+            },
+            {
+              "name": "convert_to_dict",
+              "type": "Function",
+              "inputs": {
+                "input_str": "{\"category\": \"App\", \"evidence\": \"Both\"}"
               },
               "output": {
-                "id": "chatcmpl-7nzchPo6Jq9Uf8ekJ37FemRsyV0w8",
-                "object": "chat.completion",
-                "created": 1692149307,
-                "model": "gpt-35-turbo",
-                "choices": [
-                  {
-                    "index": 0,
-                    "finish_reason": "stop",
-                    "message": {
-                      "role": "assistant",
-                      "content": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties."
-                    }
-                  }
-                ],
-                "usage": {
-                  "completion_tokens": 106,
-                  "prompt_tokens": 451,
-                  "total_tokens": 557
-                }
-              },
-              "start_time": 1692174501.692185,
-              "end_time": 1692174510.361987,
-              "error": null,
-              "children": null,
-              "node_name": null
-            }
-          ],
-          "node_name": "summarize_text_content"
-        },
-        {
-          "name": "prepare_examples",
-          "type": "Tool",
-          "inputs": {},
-          "output": [
-            {
-              "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
-              "text_content": "Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.",
-              "category": "App",
-              "evidence": "Both"
-            },
-            {
-              "url": "https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw",
-              "text_content": "NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.",
-              "category": "Channel",
-              "evidence": "URL"
-            },
-            {
-              "url": "https://arxiv.org/abs/2303.04671",
-              "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
-              "category": "Academic",
-              "evidence": "Text content"
-            },
-            {
-              "url": "https://ab.politiaromana.ro/",
-              "text_content": "There is no content available for this text.",
-              "category": "None",
-              "evidence": "None"
-            }
-          ],
-          "start_time": 1692174510.859957,
-          "end_time": 1692174511.087491,
-          "error": null,
-          "children": null,
-          "node_name": "prepare_examples"
-        },
-        {
-          "name": "AzureOpenAI.chat",
-          "type": "Tool",
-          "inputs": {
-            "prompt": "system:\nYour task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both.\n\nuser:\nThe selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\n{% for ex in examples %}\nURL: {{ex.url}}\nText content: {{ex.text_content}}\nOUTPUT:\n{\"category\": \"{{ex.category}}\", \"evidence\": \"{{ex.evidence}}\"}\n\n{% endfor %}\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: {{url}}\nText content: {{text_content}}.\nOUTPUT:",
-            "deployment_name": "gpt-35-turbo-0301",
-            "examples": [
-              {
-                "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
-                "text_content": "Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.",
                 "category": "App",
                 "evidence": "Both"
               },
-              {
-                "url": "https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw",
-                "text_content": "NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.",
-                "category": "Channel",
-                "evidence": "URL"
-              },
-              {
-                "url": "https://arxiv.org/abs/2303.04671",
-                "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
-                "category": "Academic",
-                "evidence": "Text content"
-              },
-              {
-                "url": "https://ab.politiaromana.ro/",
-                "text_content": "There is no content available for this text.",
-                "category": "None",
-                "evidence": "None"
-              }
-            ],
-            "max_tokens": 128,
-            "temperature": 0.2,
-            "text_content": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
-          },
-          "output": "{\"category\": \"App\", \"evidence\": \"Both\"}",
-          "start_time": 1692174511.321618,
-          "end_time": 1692174512.42534,
-          "error": null,
-          "children": [
-            {
-              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
-              "type": "LLM",
-              "inputs": {
-                "api_base": "https://eastus.api.cognitive.microsoft.com/",
-                "api_type": "azure",
-                "api_version": "2023-03-15-preview",
-                "engine": "gpt-35-turbo-0301",
-                "messages": [
-                  {
-                    "role": "system",
-                    "content": "Your task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both."
-                  },
-                  {
-                    "role": "user",
-                    "content": "The selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\nURL: https://play.google.com/store/apps/details?id=com.spotify.music\nText content: Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.\nOUTPUT:\n{\"category\": \"App\", \"evidence\": \"Both\"}\n\nURL: https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw\nText content: NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.\nOUTPUT:\n{\"category\": \"Channel\", \"evidence\": \"URL\"}\n\nURL: https://arxiv.org/abs/2303.04671\nText content: Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.\nOUTPUT:\n{\"category\": \"Academic\", \"evidence\": \"Text content\"}\n\nURL: https://ab.politiaromana.ro/\nText content: There is no content available for this text.\nOUTPUT:\n{\"category\": \"None\", \"evidence\": \"None\"}\n\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: https://play.google.com/store/apps/details?id=com.twitter.android\nText content: The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties..\nOUTPUT:"
-                  }
-                ],
-                "temperature": 0.2,
-                "top_p": 1.0,
-                "n": 1,
-                "stream": false,
-                "stop": null,
-                "max_tokens": 128,
-                "presence_penalty": 0.0,
-                "frequency_penalty": 0.0,
-                "logit_bias": {},
-                "user": ""
-              },
-              "output": {
-                "id": "chatcmpl-7nzcl0z2XBAHPBuUDPQ7qZhYQdd2A",
-                "object": "chat.completion",
-                "created": 1692149311,
-                "model": "gpt-35-turbo",
-                "choices": [
-                  {
-                    "index": 0,
-                    "finish_reason": "stop",
-                    "message": {
-                      "role": "assistant",
-                      "content": "{\"category\": \"App\", \"evidence\": \"Both\"}"
-                    }
-                  }
-                ],
-                "usage": {
-                  "completion_tokens": 13,
-                  "prompt_tokens": 673,
-                  "total_tokens": 686
-                }
-              },
-              "start_time": 1692174511.588482,
-              "end_time": 1692174512.416786,
+              "start_time": 1715217066.947119,
+              "end_time": 1715217066.949199,
               "error": null,
-              "children": null,
-              "node_name": null
+              "children": [],
+              "node_name": "convert_to_dict",
+              "parent_id": "",
+              "id": "7097d2f0-bc61-4b19-a84a-e2ea65e0807b",
+              "function": "convert_to_dict",
+              "system_metrics": {}
             }
           ],
-          "node_name": "classify_with_llm"
-        },
-        {
-          "name": "convert_to_dict",
-          "type": "Tool",
+          "system_metrics": {
+            "duration": 7.75465,
+            "prompt_tokens": 1131,
+            "completion_tokens": 132,
+            "total_tokens": 1263
+          },
           "inputs": {
-            "input_str": "{\"category\": \"App\", \"evidence\": \"Both\"}"
+            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
           },
           "output": {
             "category": "App",
             "evidence": "Both"
           },
-          "start_time": 1692174512.913473,
-          "end_time": 1692174512.949204,
-          "error": null,
-          "children": null,
-          "node_name": "convert_to_dict"
+          "error": null
         }
       ],
-      "variant_id": "",
       "name": "",
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 17.670048,
-        "total_tokens": 1243
+        "duration": 7.75465,
+        "prompt_tokens": 1131,
+        "completion_tokens": 132,
+        "total_tokens": 1263
       },
       "result": {
         "category": "App",
         "evidence": "Both"
       },
-      "upload_metrics": false
+      "upload_metrics": false,
+      "otel_trace_id": "0x43eaae2e03e18c4a9a8e9cd0b05e97ca",
+      "message_format": "basic"
     }
   ],
   "node_runs": [
     {
-      "node": "fetch_text_content_from_url",
-      "flow_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_fetch_text_content_from_url_0",
-      "status": "Completed",
-      "inputs": {
-        "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
-      },
-      "output": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve",
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
-      "start_time": "2023-08-16T01:28:15.428718Z",
-      "end_time": "2023-08-16T01:28:21.514779Z",
-      "index": 0,
-      "api_calls": [
-        {
-          "name": "fetch_text_content_from_url",
-          "type": "Tool",
-          "inputs": {
-            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
-          },
-          "output": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve",
-          "start_time": 1692174495.428718,
-          "end_time": 1692174501.405176,
-          "error": null,
-          "children": null,
-          "node_name": "fetch_text_content_from_url"
-        }
-      ],
-      "variant_id": "",
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": {
-        "stdout": "",
-        "stderr": ""
-      },
-      "system_metrics": {
-        "duration": 6.086061
-      },
-      "result": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve"
-    },
-    {
-      "node": "summarize_text_content",
-      "flow_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_summarize_text_content_0",
-      "status": "Completed",
-      "inputs": {
-        "prompt": "system:\nPlease summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text.\n\nuser:\nText: {{text}}\nSummary: ",
-        "deployment_name": "gpt-35-turbo-0301",
-        "max_tokens": 128,
-        "temperature": 0.2,
-        "text": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve"
-      },
-      "output": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
-      "start_time": "2023-08-16T01:28:21.594809Z",
-      "end_time": "2023-08-16T01:28:30.825224Z",
-      "index": 0,
-      "api_calls": [
-        {
-          "name": "AzureOpenAI.chat",
-          "type": "Tool",
-          "inputs": {
-            "prompt": "system:\nPlease summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text.\n\nuser:\nText: {{text}}\nSummary: ",
-            "deployment_name": "gpt-35-turbo-0301",
-            "max_tokens": 128,
-            "temperature": 0.2,
-            "text": "X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve"
-          },
-          "output": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-          "start_time": 1692174501.596812,
-          "end_time": 1692174510.370567,
-          "error": null,
-          "children": [
-            {
-              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
-              "type": "LLM",
-              "inputs": {
-                "api_base": "https://eastus.api.cognitive.microsoft.com/",
-                "api_type": "azure",
-                "api_version": "2023-03-15-preview",
-                "engine": "gpt-35-turbo-0301",
-                "messages": [
-                  {
-                    "role": "system",
-                    "content": "Please summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text."
-                  },
-                  {
-                    "role": "user",
-                    "content": "Text: X - Apps on Google Playgoogle_logo PlayGamesAppsMovies & TVBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy \u2022 Terms of ServiceGamesAppsMovies & TVBooksKidsXX Corp.Contains adsIn-app purchases3.9star21.3M reviews1B+DownloadsMature 17+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onAug 8, 2023#4 top free socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV3.920.5M reviews54321J Dmore_ve\nSummary: "
-                  }
-                ],
-                "temperature": 0.2,
-                "top_p": 1.0,
-                "n": 1,
-                "stream": false,
-                "stop": null,
-                "max_tokens": 128,
-                "presence_penalty": 0.0,
-                "frequency_penalty": 0.0,
-                "logit_bias": {},
-                "user": ""
-              },
-              "output": {
-                "id": "chatcmpl-7nzchPo6Jq9Uf8ekJ37FemRsyV0w8",
-                "object": "chat.completion",
-                "created": 1692149307,
-                "model": "gpt-35-turbo",
-                "choices": [
-                  {
-                    "index": 0,
-                    "finish_reason": "stop",
-                    "message": {
-                      "role": "assistant",
-                      "content": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties."
-                    }
-                  }
-                ],
-                "usage": {
-                  "completion_tokens": 106,
-                  "prompt_tokens": 451,
-                  "total_tokens": 557
-                }
-              },
-              "start_time": 1692174501.692185,
-              "end_time": 1692174510.361987,
-              "error": null,
-              "children": null,
-              "node_name": null
-            }
-          ],
-          "node_name": "summarize_text_content"
-        }
-      ],
-      "variant_id": "",
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": {
-        "stdout": "",
-        "stderr": ""
-      },
-      "system_metrics": {
-        "completion_tokens": 106,
-        "prompt_tokens": 451,
-        "total_tokens": 557,
-        "duration": 9.230415
-      },
-      "result": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties."
-    },
-    {
       "node": "prepare_examples",
-      "flow_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_prepare_examples_0",
+      "flow_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_prepare_examples_0",
       "status": "Completed",
       "inputs": {},
       "output": [
@@ -451,7 +370,7 @@
         },
         {
           "url": "https://arxiv.org/abs/2303.04671",
-          "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+          "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
           "category": "Academic",
           "evidence": "Text content"
         },
@@ -464,14 +383,14 @@
       ],
       "metrics": null,
       "error": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
-      "start_time": "2023-08-16T01:28:30.858961Z",
-      "end_time": "2023-08-16T01:28:31.291895Z",
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
+      "start_time": "2024-05-09T06:40:59.214173Z",
+      "end_time": "2024-05-09T06:40:59.230057Z",
       "index": 0,
       "api_calls": [
         {
           "name": "prepare_examples",
-          "type": "Tool",
+          "type": "Function",
           "inputs": {},
           "output": [
             {
@@ -488,7 +407,7 @@
             },
             {
               "url": "https://arxiv.org/abs/2303.04671",
-              "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+              "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
               "category": "Academic",
               "evidence": "Text content"
             },
@@ -499,14 +418,17 @@
               "evidence": "None"
             }
           ],
-          "start_time": 1692174510.859957,
-          "end_time": 1692174511.087491,
+          "start_time": 1715217059.215782,
+          "end_time": 1715217059.225631,
           "error": null,
-          "children": null,
-          "node_name": "prepare_examples"
+          "children": [],
+          "node_name": "prepare_examples",
+          "parent_id": "",
+          "id": "62a72136-a671-43c3-888e-5593cc8cc3c2",
+          "function": "prepare_examples",
+          "system_metrics": {}
         }
       ],
-      "variant_id": "",
       "cached_run_id": null,
       "cached_flow_run_id": null,
       "logs": {
@@ -514,7 +436,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.432934
+        "duration": 0.015884
       },
       "result": [
         {
@@ -531,7 +453,7 @@
         },
         {
           "url": "https://arxiv.org/abs/2303.04671",
-          "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+          "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
           "category": "Academic",
           "evidence": "Text content"
         },
@@ -541,16 +463,190 @@
           "category": "None",
           "evidence": "None"
         }
-      ]
+      ],
+      "message_format": "basic"
+    },
+    {
+      "node": "fetch_text_content_from_url",
+      "flow_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_fetch_text_content_from_url_0",
+      "status": "Completed",
+      "inputs": {
+        "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
+      },
+      "output": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
+      "start_time": "2024-05-09T06:40:59.220891Z",
+      "end_time": "2024-05-09T06:41:02.543660Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "fetch_text_content_from_url",
+          "type": "Function",
+          "inputs": {
+            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
+          },
+          "output": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r",
+          "start_time": 1715217059.221164,
+          "end_time": 1715217062.541699,
+          "error": null,
+          "children": [],
+          "node_name": "fetch_text_content_from_url",
+          "parent_id": "",
+          "id": "65b46774-d9c7-403d-897f-98fb8358b71a",
+          "function": "fetch_text_content_from_url",
+          "system_metrics": {}
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 3.322769
+      },
+      "result": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r",
+      "message_format": "basic"
+    },
+    {
+      "node": "summarize_text_content",
+      "flow_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_summarize_text_content_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-35-turbo-0301",
+        "max_tokens": 128,
+        "temperature": 0.2,
+        "text": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r"
+      },
+      "output": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
+      "start_time": "2024-05-09T06:41:02.548285Z",
+      "end_time": "2024-05-09T06:41:05.459021Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nPlease summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text.\n\nuser:\nText: {{text}}\nSummary: ",
+            "deployment_name": "gpt-35-turbo-0301",
+            "max_tokens": 128,
+            "temperature": 0.2,
+            "text": "X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r"
+          },
+          "output": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+          "start_time": 1715217062.54929,
+          "end_time": 1715217065.453943,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-35-turbo-0301",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "Please summarize the following text in one paragraph. 100 words.\nDo not add any information that is not in the text."
+                  },
+                  {
+                    "role": "user",
+                    "content": "Text: X - Apps on Google PlayGamesAppsMoviesBooksKidsgoogle_logo PlayGamesAppsMoviesBooksKidsnonesearchhelp_outline Sign in with Googleplay_appsLibrary & devicespaymentPayments & subscriptionsreviewsMy Play activityredeemOffersPlay PasssettingsSettingsPrivacy Policy • Terms of ServiceGamesAppsMoviesBooksKidsXX Corp.Contains adsIn-app purchases4.1star21.8M reviews1B+DownloadsRated for 12+infoInstallShareAdd to wishlistAbout this apparrow_forwardThe X app is the trusted global digital town square for everyone.With X, you can:- Post content for the world to see and join public conversations- Stay up to date on breaking news and follow your interests- Stay better informed with extra context from Community Notes- Go live with Spaces for audio or stream live video- Communicate privately with Direct Messages- Subscribe to X Premium to expand your reach, get a blue checkmark, and more- Earn a living creating exclusive content for your paid subscribers and share in the ad revenue generated in replies to your posts- Create and join Communities around topics and interests, from sports to music to technology- Upload and watch videos up to 3 hours in length- Write and read long form posts like essays and blogs- Connect directly with your customers to help your business growUpdated onMay 7, 2024#8 top grossing socialSocialData safetyarrow_forwardSafety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.No data shared with third partiesLearn more about how developers declare sharingThis app may collect these data typesLocation, Personal info and 9 othersData is encrypted in transitYou can request that data be deletedSee detailsRatings and reviewsRatings and reviews are verifiedinfo_outlinearrow_forwardRatings and reviews are verifiedinfo_outlinephone_androidPhonetablet_androidTabletwatchWatchlaptopChromebooktvTV4.121.1M r\nSummary:"
+                  }
+                ],
+                "temperature": 0.2,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": "",
+                "max_tokens": 128
+              },
+              "output": {
+                "id": "chatcmpl-9MrkddHgfRLlyVMRfZNvYNEloB9a6",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    }
+                  }
+                ],
+                "created": 1715236863,
+                "model": "gpt-35-turbo",
+                "object": "chat.completion",
+                "system_fingerprint": "fp_2f57f81c11",
+                "usage": {
+                  "completion_tokens": 119,
+                  "prompt_tokens": 445,
+                  "total_tokens": 564
+                }
+              },
+              "start_time": 1715217062.566664,
+              "end_time": 1715217065.453019,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "1e2eb481-f780-401e-a681-7014bec6882d",
+              "id": "3b3bfe46-29b8-4287-915f-138ea1ff1ef1",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 119,
+                "prompt_tokens": 445,
+                "total_tokens": 564
+              }
+            }
+          ],
+          "node_name": "summarize_text_content",
+          "parent_id": "",
+          "id": "1e2eb481-f780-401e-a681-7014bec6882d",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 119,
+            "prompt_tokens": 445,
+            "total_tokens": 564
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 119,
+        "prompt_tokens": 445,
+        "total_tokens": 564,
+        "duration": 2.910736
+      },
+      "result": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
+      "message_format": "basic"
     },
     {
       "node": "classify_with_llm",
-      "flow_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_classify_with_llm_0",
+      "flow_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_classify_with_llm_0",
       "status": "Completed",
       "inputs": {
-        "prompt": "system:\nYour task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both.\n\nuser:\nThe selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\n{% for ex in examples %}\nURL: {{ex.url}}\nText content: {{ex.text_content}}\nOUTPUT:\n{\"category\": \"{{ex.category}}\", \"evidence\": \"{{ex.evidence}}\"}\n\n{% endfor %}\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: {{url}}\nText content: {{text_content}}.\nOUTPUT:",
         "deployment_name": "gpt-35-turbo-0301",
+        "max_tokens": 128,
+        "temperature": 0.2,
+        "url": "https://play.google.com/store/apps/details?id=com.twitter.android",
+        "text_content": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
         "examples": [
           {
             "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
@@ -566,7 +662,7 @@
           },
           {
             "url": "https://arxiv.org/abs/2303.04671",
-            "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+            "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
             "category": "Academic",
             "evidence": "Text content"
           },
@@ -577,25 +673,28 @@
             "evidence": "None"
           }
         ],
-        "max_tokens": 128,
-        "temperature": 0.2,
-        "text_content": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-        "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
+        "_inputs_to_escape": [
+          "url"
+        ]
       },
       "output": "{\"category\": \"App\", \"evidence\": \"Both\"}",
       "metrics": null,
       "error": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
-      "start_time": "2023-08-16T01:28:31.320617Z",
-      "end_time": "2023-08-16T01:28:32.902899Z",
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
+      "start_time": "2024-05-09T06:41:05.462871Z",
+      "end_time": "2024-05-09T06:41:06.944719Z",
       "index": 0,
       "api_calls": [
         {
           "name": "AzureOpenAI.chat",
-          "type": "Tool",
+          "type": "Function",
           "inputs": {
             "prompt": "system:\nYour task is to classify a given url into one of the following categories:\nMovie, App, Academic, Channel, Profile, PDF or None based on the text content information.\nThe classification will be based on the url, the webpage text content summary, or both.\n\nuser:\nThe selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\n{% for ex in examples %}\nURL: {{ex.url}}\nText content: {{ex.text_content}}\nOUTPUT:\n{\"category\": \"{{ex.category}}\", \"evidence\": \"{{ex.evidence}}\"}\n\n{% endfor %}\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: {{url}}\nText content: {{text_content}}.\nOUTPUT:",
             "deployment_name": "gpt-35-turbo-0301",
+            "max_tokens": 128,
+            "temperature": 0.2,
+            "url": "https://play.google.com/store/apps/details?id=com.twitter.android",
+            "text_content": "The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion.",
             "examples": [
               {
                 "url": "https://play.google.com/store/apps/details?id=com.spotify.music",
@@ -611,7 +710,7 @@
               },
               {
                 "url": "https://arxiv.org/abs/2303.04671",
-                "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
+                "text_content": "Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.",
                 "category": "Academic",
                 "evidence": "Text content"
               },
@@ -622,24 +721,20 @@
                 "evidence": "None"
               }
             ],
-            "max_tokens": 128,
-            "temperature": 0.2,
-            "text_content": "The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties.",
-            "url": "https://play.google.com/store/apps/details?id=com.twitter.android"
+            "_inputs_to_escape": [
+              "url"
+            ]
           },
           "output": "{\"category\": \"App\", \"evidence\": \"Both\"}",
-          "start_time": 1692174511.321618,
-          "end_time": 1692174512.42534,
+          "start_time": 1715217065.463495,
+          "end_time": 1715217066.938864,
           "error": null,
           "children": [
             {
-              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "name": "openai_chat",
               "type": "LLM",
               "inputs": {
-                "api_base": "https://eastus.api.cognitive.microsoft.com/",
-                "api_type": "azure",
-                "api_version": "2023-03-15-preview",
-                "engine": "gpt-35-turbo-0301",
+                "model": "gpt-35-turbo-0301",
                 "messages": [
                   {
                     "role": "system",
@@ -647,52 +742,69 @@
                   },
                   {
                     "role": "user",
-                    "content": "The selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\nURL: https://play.google.com/store/apps/details?id=com.spotify.music\nText content: Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.\nOUTPUT:\n{\"category\": \"App\", \"evidence\": \"Both\"}\n\nURL: https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw\nText content: NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.\nOUTPUT:\n{\"category\": \"Channel\", \"evidence\": \"URL\"}\n\nURL: https://arxiv.org/abs/2303.04671\nText content: Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and receiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.\nOUTPUT:\n{\"category\": \"Academic\", \"evidence\": \"Text content\"}\n\nURL: https://ab.politiaromana.ro/\nText content: There is no content available for this text.\nOUTPUT:\n{\"category\": \"None\", \"evidence\": \"None\"}\n\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: https://play.google.com/store/apps/details?id=com.twitter.android\nText content: The X app is a social media platform that allows users to post content, follow breaking news, communicate privately, and create and join communities around various topics. It also offers a premium subscription service for users to expand their reach and earn money by creating exclusive content for paid subscribers. The app allows users to upload and watch videos up to 3 hours in length and write and read long-form posts. The app collects various types of data, including location and personal information, but data is encrypted in transit and not shared with third parties..\nOUTPUT:"
+                    "content": "The selection range of the value of \"category\" must be within \"Movie\", \"App\", \"Academic\", \"Channel\", \"Profile\", \"PDF\" and \"None\".\nThe selection range of the value of \"evidence\" must be within \"Url\", \"Text content\", and \"Both\".\nHere are a few examples:\nURL: https://play.google.com/store/apps/details?id=com.spotify.music\nText content: Spotify is a free music and podcast streaming app with millions of songs, albums, and original podcasts. It also offers audiobooks, so users can enjoy thousands of stories. It has a variety of features such as creating and sharing music playlists, discovering new music, and listening to popular and exclusive podcasts. It also has a Premium subscription option which allows users to download and listen offline, and access ad-free music. It is available on all devices and has a variety of genres and artists to choose from.\nOUTPUT:\n{\"category\": \"App\", \"evidence\": \"Both\"}\n\nURL: https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw\nText content: NFL Sunday Ticket is a service offered by Google LLC that allows users to watch NFL games on YouTube. It is available in 2023 and is subject to the terms and privacy policy of Google LLC. It is also subject to YouTube's terms of use and any applicable laws.\nOUTPUT:\n{\"category\": \"Channel\", \"evidence\": \"URL\"}\n\nURL: https://arxiv.org/abs/2303.04671\nText content: Visual ChatGPT is a system that enables users to interact with ChatGPT by sending and testreceiving not only languages but also images, providing complex visual questions or visual editing instructions, and providing feedback and asking for corrected results. It incorporates different Visual Foundation Models and is publicly available. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models.\nOUTPUT:\n{\"category\": \"Academic\", \"evidence\": \"Text content\"}\n\nURL: https://ab.politiaromana.ro/\nText content: There is no content available for this text.\nOUTPUT:\n{\"category\": \"None\", \"evidence\": \"None\"}\n\n\nFor a given URL and text content, classify the url to complete the category and indicate evidence:\nURL: https://play.google.com/store/apps/details?id=com.twitter.android\nText content: The X app is a global digital platform that allows users to post content, engage in public conversations, stay updated on news, and follow their interests. It offers features such as Community Notes for additional context, Spaces for live audio and video streaming, Direct Messages for private communication, and the option to subscribe to X Premium for expanded reach and exclusive content creation. Users can also join and create Communities, upload and watch videos, write long-form posts, and connect with customers for business growth. The app emphasizes data safety and privacy, with encrypted data transmission and the ability for users to request data deletion..\nOUTPUT:"
                   }
                 ],
                 "temperature": 0.2,
                 "top_p": 1.0,
                 "n": 1,
                 "stream": false,
-                "stop": null,
-                "max_tokens": 128,
                 "presence_penalty": 0.0,
                 "frequency_penalty": 0.0,
-                "logit_bias": {},
-                "user": ""
+                "user": "",
+                "max_tokens": 128
               },
               "output": {
-                "id": "chatcmpl-7nzcl0z2XBAHPBuUDPQ7qZhYQdd2A",
-                "object": "chat.completion",
-                "created": 1692149311,
-                "model": "gpt-35-turbo",
+                "id": "chatcmpl-9Mrkg59WA4jgZoXp06CbiHGmHrBdo",
                 "choices": [
                   {
-                    "index": 0,
                     "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
                     "message": {
+                      "content": "{\"category\": \"App\", \"evidence\": \"Both\"}",
                       "role": "assistant",
-                      "content": "{\"category\": \"App\", \"evidence\": \"Both\"}"
+                      "function_call": null,
+                      "tool_calls": null
                     }
                   }
                 ],
+                "created": 1715236866,
+                "model": "gpt-35-turbo",
+                "object": "chat.completion",
+                "system_fingerprint": "fp_2f57f81c11",
                 "usage": {
                   "completion_tokens": 13,
-                  "prompt_tokens": 673,
-                  "total_tokens": 686
+                  "prompt_tokens": 686,
+                  "total_tokens": 699
                 }
               },
-              "start_time": 1692174511.588482,
-              "end_time": 1692174512.416786,
+              "start_time": 1715217065.492499,
+              "end_time": 1715217066.938043,
               "error": null,
-              "children": null,
-              "node_name": null
+              "children": [],
+              "node_name": null,
+              "parent_id": "30e0c1a3-3c93-4d05-b834-1e77872eac2d",
+              "id": "6c55f1c2-4e32-4aa2-9edf-1eb5fd050143",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 13,
+                "prompt_tokens": 686,
+                "total_tokens": 699
+              }
             }
           ],
-          "node_name": "classify_with_llm"
+          "node_name": "classify_with_llm",
+          "parent_id": "",
+          "id": "30e0c1a3-3c93-4d05-b834-1e77872eac2d",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 13,
+            "prompt_tokens": 686,
+            "total_tokens": 699
+          }
         }
       ],
-      "variant_id": "",
       "cached_run_id": null,
       "cached_flow_run_id": null,
       "logs": {
@@ -701,16 +813,17 @@
       },
       "system_metrics": {
         "completion_tokens": 13,
-        "prompt_tokens": 673,
-        "total_tokens": 686,
-        "duration": 1.582282
+        "prompt_tokens": 686,
+        "total_tokens": 699,
+        "duration": 1.481848
       },
-      "result": "{\"category\": \"App\", \"evidence\": \"Both\"}"
+      "result": "{\"category\": \"App\", \"evidence\": \"Both\"}",
+      "message_format": "basic"
     },
     {
       "node": "convert_to_dict",
-      "flow_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283",
-      "run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_convert_to_dict_0",
+      "flow_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae",
+      "run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_convert_to_dict_0",
       "status": "Completed",
       "inputs": {
         "input_str": "{\"category\": \"App\", \"evidence\": \"Both\"}"
@@ -721,14 +834,14 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "6f02f4b3-6822-4a33-8b55-c32aad105283_0",
-      "start_time": "2023-08-16T01:28:32.913473Z",
-      "end_time": "2023-08-16T01:28:33.075090Z",
+      "parent_run_id": "07a8d1f6-2d44-419d-8479-e057cdbc68ae_0",
+      "start_time": "2024-05-09T06:41:06.946864Z",
+      "end_time": "2024-05-09T06:41:06.950296Z",
       "index": 0,
       "api_calls": [
         {
           "name": "convert_to_dict",
-          "type": "Tool",
+          "type": "Function",
           "inputs": {
             "input_str": "{\"category\": \"App\", \"evidence\": \"Both\"}"
           },
@@ -736,14 +849,17 @@
             "category": "App",
             "evidence": "Both"
           },
-          "start_time": 1692174512.913473,
-          "end_time": 1692174512.949204,
+          "start_time": 1715217066.947119,
+          "end_time": 1715217066.949199,
           "error": null,
-          "children": null,
-          "node_name": "convert_to_dict"
+          "children": [],
+          "node_name": "convert_to_dict",
+          "parent_id": "",
+          "id": "7097d2f0-bc61-4b19-a84a-e2ea65e0807b",
+          "function": "convert_to_dict",
+          "system_metrics": {}
         }
       ],
-      "variant_id": "",
       "cached_run_id": null,
       "cached_flow_run_id": null,
       "logs": {
@@ -751,12 +867,13 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.161617
+        "duration": 0.003432
       },
       "result": {
         "category": "App",
         "evidence": "Both"
-      }
+      },
+      "message_format": "basic"
     }
   ]
 }
