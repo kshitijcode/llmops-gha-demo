@@ -3,7 +3,7 @@ name: Deploy Prompts with Promptflow
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["run-eval-pf-pipeline"]
+    workflows: ["Test and Evaluate Prompts with Promptflow"]
     branches: [main]
     types:
       - completed
@@ -17,6 +17,7 @@ env:
   ENDPOINT_NAME: web-classification
   DEPLOYMENT_NAME: blue
 
+  
 jobs:
   create-endpoint-and-deploy-pf:
     runs-on: ubuntu-latest
@@ -53,5 +54,3 @@ jobs:
       run: az ml online-endpoint show -n ${{env.ENDPOINT_NAME}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}}
     - name: Check the status of the deployment
       run: az ml online-deployment get-logs --name blue --endpoint-name ${{env.ENDPOINT_NAME}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}}
-    - name: Invoke model
-      run: az ml online-endpoint invoke --name ${{env.ENDPOINT_NAME}} --request-file promptflow/deployment/sample-request.json  -g ${{env.GROUP}} -w ${{env.WORKSPACE}} 
