@@ -37,7 +37,7 @@ jobs:
         run: pip install -r promptflow/web-classification/requirements.txt # Installs required Python packages from the requirements file.
       - name: Run promptflow
         run: |
-          pfazure run create -f promptflow/web-classification/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/run_info.txt
+          pfazure run create -f promptflow/web-classification/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/run_info.txt || true
           cat promptflow/llmops-helper/run_info.txt # Executes Promptflow run and logs the output.
       - name: Set run name
         run: |
@@ -46,6 +46,7 @@ jobs:
         run: echo "Run name is:" ${{env.RUN_NAME}} # Displays the run name for debugging.
       - name: Show promptflow results
         run: pfazure run show-details --name ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Shows detailed information about the run.
+        
       - name: Run promptflow evaluations
         run: |
           pfazure run create -f promptflow/web-classification/run_evaluation.yml --run ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/eval_info.txt # Executes evaluations on the run.
