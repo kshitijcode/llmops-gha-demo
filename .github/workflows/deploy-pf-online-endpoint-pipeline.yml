@@ -17,6 +17,7 @@ env:
   ENDPOINT_NAME: web-classification
   DEPLOYMENT_NAME: blue
 
+  
 jobs:
   create-endpoint-and-deploy-pf:
     runs-on: ubuntu-latest
