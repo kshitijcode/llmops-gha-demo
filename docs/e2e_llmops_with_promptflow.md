@@ -127,9 +127,7 @@ Please go to workspace portal, click `Prompt flow` -> `Connections` -> `Create` 
 ## Setup runtime for Prompt flow 
 Prompt flow's runtime provides the computing resources required for the application to run, including a Docker image that contains all necessary dependency packages.
 
-In this guide, we will use a runtime to run your prompt flow. You need to create your own [Prompt flow runtime](https://learn.microsoft.com/azure/machine-learning/prompt-flow/how-to-create-manage-runtime)
-
-Please go to workspace portal, click `Prompt flow` -> `Runtime` -> `Create`, then follow the instruction to create your own connections
+In this guide, we will use an automatic runtime so we dont need to do anything at this step. 
 
 ## Setup variables with for Prompt flow and GitHub Actions 
 
