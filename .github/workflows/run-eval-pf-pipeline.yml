@@ -21,74 +21,74 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2 # Checks out the repository under $GITHUB_WORKSPACE so your workflow can access it.
-      # - name: Install az ml extension
-      #   run: az extension add -n ml -y # Adds the Azure ML CLI extension.
-      # - name: Azure login
-      #   uses: azure/login@v1
-      #   with:
-      #     creds: ${{secrets.AZURE_CREDENTIALS}} # Logs into Azure using the credentials stored in GitHub secrets.
-      # - name: Set up Python
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: '3.11.4' # Sets up Python version to ensure compatibility.
-      # - name: Set default subscription
-      #   run: az account set -s ${{env.SUBSCRIPTION}} # Sets the default Azure subscription to use.
-      # - name: Install promptflow
-      #   run: pip install -r promptflow/web-classification/requirements.txt # Installs required Python packages from the requirements file.
-      # - name: Run promptflow
-      #   run: |
-      #     pfazure run create -f promptflow/web-classification/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/run_info.txt
-      #     cat promptflow/llmops-helper/run_info.txt # Executes Promptflow run and logs the output.
-      # - name: Set run name
-      #   run: |
-      #     echo "RUN_NAME=$(python promptflow/llmops-helper/parse_run_output.py run_info.txt)" >> "$GITHUB_ENV" # Parses the run name from the output and sets it as an environment variable.
-      # - name: Show the current run name
-      #   run: echo "Run name is:" ${{env.RUN_NAME}} # Displays the run name for debugging.
-      # - name: Show promptflow results
-      #   run: pfazure run show-details --name ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Shows detailed information about the run.
-      # - name: Run promptflow evaluations
-      #   run: |
-      #     pfazure run create -f promptflow/web-classification/run_evaluation.yml --run ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/eval_info.txt # Executes evaluations on the run.
-      # - name: Get eval run name
-      #   run: echo "EVAL_RUN_NAME=$(python promptflow/llmops-helper/parse_run_output.py eval_info.txt)" >> "$GITHUB_ENV" # Parses the evaluation run name from the output.
-      # - name: Show promptflow details
-      #   run: pfazure run show-details --name ${{env.EVAL_RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Shows detailed information about the evaluation.
-      # - name: Show promptflow metrics
-      #   run: pfazure run show-metrics --name ${{env.EVAL_RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} > promptflow/llmops-helper/eval_result.json # Retrieves and saves evaluation metrics.
+      - name: Install az ml extension
+        run: az extension add -n ml -y # Adds the Azure ML CLI extension.
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}} # Logs into Azure using the credentials stored in GitHub secrets.
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.4' # Sets up Python version to ensure compatibility.
+      - name: Set default subscription
+        run: az account set -s ${{env.SUBSCRIPTION}} # Sets the default Azure subscription to use.
+      - name: Install promptflow
+        run: pip install -r promptflow/web-classification/requirements.txt # Installs required Python packages from the requirements file.
+      - name: Run promptflow
+        run: |
+          pfazure run create -f promptflow/web-classification/run.yml --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/run_info.txt
+          cat promptflow/llmops-helper/run_info.txt # Executes Promptflow run and logs the output.
+      - name: Set run name
+        run: |
+          echo "RUN_NAME=$(python promptflow/llmops-helper/parse_run_output.py run_info.txt)" >> "$GITHUB_ENV" # Parses the run name from the output and sets it as an environment variable.
+      - name: Show the current run name
+        run: echo "Run name is:" ${{env.RUN_NAME}} # Displays the run name for debugging.
+      - name: Show promptflow results
+        run: pfazure run show-details --name ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Shows detailed information about the run.
+      - name: Run promptflow evaluations
+        run: |
+          pfazure run create -f promptflow/web-classification/run_evaluation.yml --run ${{env.RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} --stream > promptflow/llmops-helper/eval_info.txt # Executes evaluations on the run.
+      - name: Get eval run name
+        run: echo "EVAL_RUN_NAME=$(python promptflow/llmops-helper/parse_run_output.py eval_info.txt)" >> "$GITHUB_ENV" # Parses the evaluation run name from the output.
+      - name: Show promptflow details
+        run: pfazure run show-details --name ${{env.EVAL_RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Shows detailed information about the evaluation.
+      - name: Show promptflow metrics
+        run: pfazure run show-metrics --name ${{env.EVAL_RUN_NAME}} --subscription ${{env.SUBSCRIPTION}} -g ${{env.GROUP}} -w ${{env.WORKSPACE}} > promptflow/llmops-helper/eval_result.json # Retrieves and saves evaluation metrics.
 
   # Job to assert evaluation results and potentially register a model.
-  # assert-and-register-model:
-  #   needs: login-and-run-and-evalpf # This job depends on the completion of the first job.
-  #   runs-on: ubuntu-latest 
-  #   steps:
-  #     - name: Check out repo
-  #       uses: actions/checkout@v2 # Checks out the repository under $GITHUB_WORKSPACE.
-  #     - name: Install az ml extension
-  #       run: az extension add -n ml -y # Adds the Azure ML CLI extension.
-  #     - name: Azure login
-  #       uses: azure/login@v1
-  #       with:
-  #         creds: ${{secrets.AZURE_CREDENTIALS}} # Logs into Azure.
-  #     - name: Set up Python
-  #       uses: actions/setup-python@v2
-  #       with:
-  #         python-version: '3.11.4' # Ensures the correct Python version is used.
-  #     - name: Set default subscription
-  #       run: az account set -s ${{env.SUBSCRIPTION}} # Sets the default Azure subscription.
-  #     - name: Install promptflow
-  #       run: pip install -r promptflow/web-classification/requirements.txt # Installs required Python packages.
-  #     - name: Get assert eval results
-  #       id: jobMetricAssert
-  #       run: |
-  #         export ASSERT=$(python promptflow/llmops-helper/assert.py result.json 0.6) # Runs assertion script to check if the results meet a quality threshold.
-  #         echo "::debug::Assert has returned the following value: $ASSERT"
-  #         if ${ASSERT,,} ; then
-  #           echo "::debug::Prompt flow run met the quality bar and can be deployed."
-  #           echo "::set-output name=result::true"
-  #         else
-  #           echo "::warning::Prompt flow run didn't meet quality bar."
-  #           echo "::set-output name=result::false"
-  #         fi
-  #     - name: Register promptflow model
-  #       if: ${{ steps.jobMetricAssert.outputs.result == 'true' }}
-  #       run: az ml model create --file promptflow/deployment/model.yaml  -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Registers the model if it met the quality threshold.
+  assert-and-register-model:
+    needs: login-and-run-and-evalpf # This job depends on the completion of the first job.
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2 # Checks out the repository under $GITHUB_WORKSPACE.
+      - name: Install az ml extension
+        run: az extension add -n ml -y # Adds the Azure ML CLI extension.
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}} # Logs into Azure.
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.4' # Ensures the correct Python version is used.
+      - name: Set default subscription
+        run: az account set -s ${{env.SUBSCRIPTION}} # Sets the default Azure subscription.
+      - name: Install promptflow
+        run: pip install -r promptflow/web-classification/requirements.txt # Installs required Python packages.
+      - name: Get assert eval results
+        id: jobMetricAssert
+        run: |
+          export ASSERT=$(python promptflow/llmops-helper/assert.py result.json 0.6) # Runs assertion script to check if the results meet a quality threshold.
+          echo "::debug::Assert has returned the following value: $ASSERT"
+          if ${ASSERT,,} ; then
+            echo "::debug::Prompt flow run met the quality bar and can be deployed."
+            echo "::set-output name=result::true"
+          else
+            echo "::warning::Prompt flow run didn't meet quality bar."
+            echo "::set-output name=result::false"
+          fi
+      - name: Register promptflow model
+        if: ${{ steps.jobMetricAssert.outputs.result == 'true' }}
+        run: az ml model create --file promptflow/deployment/model.yaml  -g ${{env.GROUP}} -w ${{env.WORKSPACE}} # Registers the model if it met the quality threshold.
