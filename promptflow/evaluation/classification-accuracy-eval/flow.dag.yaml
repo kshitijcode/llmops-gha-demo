@@ -1,8 +1,8 @@
 inputs:
   groundtruth:
     type: string
-    description: Please specify the groundtruth column, which contains the true label
-      to the outputs that your flow produces.
+    description: Please specify the groundtruth column, which contains the true
+      label to the outputs that your flow produces.
     default: APP
   prediction:
     type: string
